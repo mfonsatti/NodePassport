@@ -8,7 +8,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
     console.log('connected');
 });
-const Person = require('./Models/person');
+const User = require('./Models/user');
 // const personSchema = new mongoose.Schema(schema.person.data);
 
 // const PersonModel = mongoose.model(schema.person.collection, personSchema);

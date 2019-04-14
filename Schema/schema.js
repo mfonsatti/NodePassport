@@ -1,10 +1,20 @@
 module.exports = {
-    person: {
-        firstName: String,
-        lastName: String,
-        email: String,
-        phone: String,
-        age: Number,
-        work: String,
+    user: {
+        name: {
+            type: String,
+            required: true
+        },
+        email: {
+            type: String,
+            required: true
+        },
+        password: {
+            type: String,
+            required: true
+        },
+        date: {
+            type: Date,
+            default: Date.now
+        },
     }
 };
