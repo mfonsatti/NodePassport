@@ -10,7 +10,7 @@ const passport = require('passport');
 require('./config/passport')(passport);
 
 //DB Config
-const db = require('./config/keys').mongoURI;
+const db = require('./config/mongo').mongoURI;
 
 //Connect to Mongo
 mongoose.connect(db, { useNewUrlParser: true })
