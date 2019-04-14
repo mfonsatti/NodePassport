@@ -5,6 +5,8 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const app = express();
 const passport = require('passport');
+const dotenv = require('dotenv');
+dotenv.config();
 
 //Passport config
 require('./config/passport')(passport);
@@ -49,5 +51,5 @@ app.use((req,res,next) => {
 //Routes
 app.use('/', require('./Routes/index'));
 app.use('/users', require('./Routes/user'));
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, console.log(`Server running on port ${PORT}`));
+// const PORT = process.env.PORT || 5000;
+app.listen(process.env.PORT, console.log(`Server running on port ${process.env.PORT}`));
