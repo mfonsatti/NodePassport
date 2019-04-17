@@ -5,11 +5,13 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const app = express();
 const passport = require('passport');
+const bycript = require('bcryptjs');
 const dotenv = require('dotenv');
 dotenv.config();
 
-//Passport config
-require('./config/passport')(passport);
+//Passport Strategy config
+require('./config/passport/local')(passport);
+require('./config/passport/google')(passport, bycript);
 
 //DB Config
 const db = require('./config/mongo').mongoURI;
@@ -51,5 +53,6 @@ app.use((req,res,next) => {
 //Routes
 app.use('/', require('./Routes/index'));
 app.use('/users', require('./Routes/user'));
+app.use('/auth', require('./Routes/auth'));
 // const PORT = process.env.PORT || 5000;
 app.listen(process.env.PORT, console.log(`Server running on port ${process.env.PORT}`));

@@ -12,6 +12,15 @@ module.exports = {
             type: String,
             required: true
         },
+        provider: {
+            type: String
+        },
+        googleId: {
+            type: String
+        },
+        googleData: {
+            type: Object
+        },
         date: {
             type: Date,
             default: Date.now
