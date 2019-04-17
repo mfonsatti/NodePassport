@@ -42,6 +42,7 @@ module.exports = function (passport, bcrypt) {
                             })
                         );
                     } else {
+                        console.log('dio');
                         return done(null,user);
                     }
                 })

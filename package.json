@@ -1,0 +1,25 @@
+{
+  "name": "nodepassport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server/app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfonsatti/NodePassport.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfonsatti/NodePassport/issues"
+  },
+  "homepage": "https://github.com/mfonsatti/NodePassport#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
